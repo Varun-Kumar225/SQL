@@ -1,0 +1,2 @@
+-- SQL Zoo: SELECT Basics
+-- My answers for SELECT Basics section

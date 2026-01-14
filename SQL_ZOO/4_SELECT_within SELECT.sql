@@ -26,9 +26,7 @@ select continent ,name,area from world w where area=(select max(area) from world
 select continent,name from world w where name=(select name from world where w.continent=world.continent order by name limit 1) ;
 
 -- 9.Find the continents where all countries have a population <= 25000000. Then find the names of the countries associated with these continents. Show name, continent and population.
+select name, continent,population from world where continent in(select continent from world group by continent having max(population)<=25000000);
 
-
-
-
-
-
+-- 10.Some countries have populations more than three times that of all of their neighbours (in the same continent). Give the countries and continents.
+select name , continent from world w where population > 3* (select max(population) from world where continent=w.continent and name<>w.name) ;

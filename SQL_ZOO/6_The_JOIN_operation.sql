@@ -4,4 +4,7 @@ SELECT matchid,player FROM goal WHERE teamid= 'GER';
 -- 2.Show id, stadium, team1, team2 for just game 1012
 SELECT id,stadium,team1,team2FROM game where id=1012;
 
--- 3.
+-- 3.Modify it to show the player, teamid, stadium and mdate for every German goal.
+SELECT player,teamid,stadium,mdate
+  FROM game JOIN goal ON (id=matchid) where teamid='GER';
+

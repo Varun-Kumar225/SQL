@@ -22,4 +22,3 @@ select mdate, teamname from game g join eteam e on g.team1=e.id where coach='Fer
 select player from goal g join game ga on g.matchid=ga.id where stadium='National Stadium, Warsaw';
 
 -- 8.Instead show the name of all players who scored a goal against Germany.
-
